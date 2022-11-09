@@ -1,0 +1,10 @@
+<div class="todoContainer">
+  <div class="inputContainer">
+  <input class = "inputItem" type="text" placeholder="Add Item" [(ngModel)] = "newTask" />
+  <button class="addBtn" (click) = "addTodo()">Add</button>
+ </div>
+ <div class="allItems" *ngFor="let item of list; let index = index" >
+  <h4> {{ item }} </h4> 
+  <button class = "deleteBtn" (click) = "onDelete(index)"> Delete </button>
+</div>
+</div>
